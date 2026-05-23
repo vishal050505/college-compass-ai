@@ -45,45 +45,7 @@ Results link directly to college detail pages
 🏗️ Tech Stack
 LayerTechnologyFrontendNext.js 16, React, TypeScriptStylingTailwind CSS, Framer MotionBackendNode.js, Express.js, TypeScriptDatabasePostgreSQL (Neon)ORMPrismaNotificationsreact-hot-toastDeploymentVercel (frontend) + Render (backend)
 
-📁 Project Structure
-college-compass-ai/
-├── client/                     # Next.js Frontend
-│   ├── app/
-│   │   ├── page.tsx            # Homepage
-│   │   ├── colleges/
-│   │   │   ├── page.tsx        # College listing + search
-│   │   │   └── [id]/
-│   │   │       └── page.tsx    # College detail page
-│   │   ├── compare/
-│   │   │   └── page.tsx        # Compare colleges
-│   │   └── predictor/
-│   │       └── page.tsx        # AI predictor tool
-│   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   ├── CollegeCard.tsx
-│   │   ├── LoadingSkeleton.tsx
-│   │   └── EmptyState.tsx
-│   ├── hooks/
-│   │   └── useDebounce.ts
-│   └── types/
-│       └── college.ts
-│
-└── server/                     # Express Backend
-    ├── src/
-    │   ├── controllers/
-    │   │   ├── collegeController.ts
-    │   │   └── predictorController.ts
-    │   ├── routes/
-    │   │   ├── collegeRoutes.ts
-    │   │   └── predictorRoutes.ts
-    │   ├── prisma/
-    │   │   └── prismaClient.ts
-    │   ├── app.ts
-    │   └── server.ts
-    └── prisma/
-        ├── schema.prisma
-        └── seed.ts
+
 
 ⚙️ Backend API Endpoints
 MethodEndpointDescriptionGET/api/collegesList colleges with filters + paginationGET/api/colleges/filtersGet all filter options (types, states, exams)GET/api/colleges/:idGet single college with courses + reviewsPOST/api/predictorPredict colleges based on exam + rank + criteria
